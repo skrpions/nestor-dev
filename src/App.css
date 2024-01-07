@@ -54,7 +54,7 @@ header a{
 .social-icons {
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 0px;
     display: flex;
     align-items: center;
     flex-direction: column;
