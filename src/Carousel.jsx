@@ -221,7 +221,7 @@ const Carousel = () => {
     };
 
     const handleWhatsAppClick = () => {
-        window.open('https://wa.me/3105338818', '_blank');
+        window.open('https://wa.me/+573105338818', '_blank');
     };
 
     return (
