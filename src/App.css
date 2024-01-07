@@ -101,6 +101,7 @@ header a{
     object-fit: cover;
 }
 .carousel .list .item .content{
+    
     position: absolute;
     top: 30%;
     width: 1140px;
@@ -170,8 +171,16 @@ header a{
     flex-shrink: 0;
     position: relative;
     overflow: hidden;
-    /* cursor: pointer; */
-}
+    cursor: pointer;
+    border: 1px solid transparent; /* Adjust color and width as needed */
+    transition: border 0.2s ease-in-out; /* Adjust duration as needed */
+    border-radius: 20px; /* Rounded corners always applied */
+  }
+  
+  .thumbnail .item:hover {
+    border: 1px solid #b7b7b7; /* Apply a different color on hover */
+  }
+
 
 .thumbnail .item img {
     width: 100%;
