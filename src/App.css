@@ -5,7 +5,7 @@ body{
     color: #eee;
     font-family:'Times New Roman', Times, serif;
     font-size: 12px;
-    margin-right: 360px !important;
+    /* margin-right: 360px !important; */
 }
 a{
     text-decoration: none;
@@ -20,10 +20,115 @@ header{
     position: relative;
     z-index: 100;
 }
+
 header a{
     color: #eee;
     margin-right: 40px;
 }
+
+.buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .buttons button svg {
+    margin-left: 8px;
+  }
+  
+  .buttons button:hover svg {
+    fill: #3a9ff1;
+  }
+  
+  .buttons button:hover .arrows {
+    opacity: 1;
+  }
+  
+  .buttons .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .buttons .arrows .arrow {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #0b8cc3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+  }
+  
+  .buttons .arrows .arrow:nth-child(1) {
+    transform: rotate(0deg);
+  }
+  
+  .buttons .arrows .arrow:nth-child(2) {
+    transform: rotate(90deg);
+  }
+  
+  .buttons .arrows .arrow:nth-child(3) {
+    transform: rotate(180deg);
+  }
+
+/* Animación de opacidad */
+.header,
+.carousel {
+  opacity: 0;
+  animation: fadein 3s ease-in-out forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animación de posición */
+.header {
+  transform: translateY(-100px);
+  animation: slidein 3s ease-in-out forwards;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Ensure it's above other elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional semi-transparent background */
+  }
+
+  .app-container {
+    position: relative; /* Establish a positioning context for the spinner */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 .video-thumbnail {
     position: absolute; /* O ajusta el estilo según tus necesidades */
@@ -147,6 +252,7 @@ header a{
     font-weight: 500;
     width: 200px;
     cursor: pointer;
+    border-radius: 25px;
 }
 .carousel .list .item .buttons button:nth-child(2){
     background-color: transparent;
