@@ -326,7 +326,7 @@ header a{
   }
   
   .thumbnail .item:hover {
-    border: 1px solid #b7b7b7; /* Apply a different color on hover */
+    /* border: 1px solid #b7b7b7; */ /* Apply a different color on hover */
   }
 
 
